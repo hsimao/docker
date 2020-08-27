@@ -8,4 +8,4 @@ before_install:
   - docker build -t hsimao/docker -f Dockerfile.dev .
 
 script:
-  - docker run hsimao/docker npm run test -- --coverage
+  - docker run -e CI=true hsimao/docker npm run test
